@@ -43,7 +43,11 @@ docker compose build
 ```sh
 docker compose up -d
 ```
-6. Access the app at [http://localhost:8000/](http://localhost:8000/)
+6. Run the migrations.
+```sh
+docker-compose exec web python manage.py migrate --noinput
+```
+7. Access the app at [http://localhost:8000/](http://localhost:8000/)
 
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)

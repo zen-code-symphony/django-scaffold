@@ -1,2 +1,5 @@
 # Django framework.
 Django==5.0
+
+# PostgreSQL database adapter.
+psycopg2-binary==2.9.9
