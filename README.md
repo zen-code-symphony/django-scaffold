@@ -35,14 +35,15 @@ python -m venv venv && source venv/bin/activate
 ```sh
 python -m pip install --upgrade pip && python -m pip install -r requirements.txt
 ```
-4. Run migrations.
+4. Build the dev container image(s).
 ```sh
-python manage.py migrate
+docker compose build
 ```
-5. Run the dev server.
+5. Run the container(s).
 ```sh
-python manage.py runserver
+docker compose up -d
 ```
+6. Access the app at [http://localhost:8000/](http://localhost:8000/)
 
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)
