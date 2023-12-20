@@ -12,9 +12,9 @@ The objective of this project is to provide a quick scaffold for a django projec
 ## Prerequisites
 
 ### Install software
-- [Git](https://git-scm.com/downloads)
-- [Docker](https://docs.docker.com/get-docker/)
-- [Pyenv - _optional_](https://github.com/pyenv/pyenv)
+- [docker](https://docs.docker.com/get-docker/)
+- [git](https://git-scm.com/downloads)
+- [pyenv - _optional_](https://github.com/pyenv/pyenv)
 - [VS Code - _optional_](https://code.visualstudio.com/download)
 
 
@@ -42,3 +42,7 @@ python manage.py migrate
 ```sh
 python manage.py runserver
 ```
+
+## Learning resources
+* [Git](https://git-scm.com/book/en/v2)
+* [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
