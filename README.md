@@ -44,5 +44,6 @@ python manage.py runserver
 ```
 
 ## Learning resources
+* [Docker](https://docs.docker.com/guides/get-started/)
 * [Git](https://git-scm.com/book/en/v2)
 * [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
