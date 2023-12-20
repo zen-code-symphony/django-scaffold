@@ -1,8 +1,10 @@
 # django-scaffold
 
+The objective of this project is to provide a quick scaffold for a django project that can be used as a reference for your own project.
+
 ## Follow the below steps to get up and running:
 
-NOTE: It assumes that you have installed Python using pyenv and configured git.
+NOTE: It assumes that you have installed Python and configured git. If you are using pyenv, `.python-version` file will be used.
 
 ```sh
 $ git clone git@github.com:zen-code-symphony/django-scaffold.git
