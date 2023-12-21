@@ -14,8 +14,13 @@ click==8.1.7
     # via pip-tools
 django==5.0
     # via -r requirements.txt
+gunicorn==21.2.0
+    # via -r requirements.txt
 packaging==23.2
-    # via build
+    # via
+    #   -r requirements.txt
+    #   build
+    #   gunicorn
 pip-tools==7.3.0
     # via -r dev-requirements.in
 psycopg2-binary==2.9.9

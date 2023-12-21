@@ -35,19 +35,30 @@ python -m venv venv && source venv/bin/activate
 ```sh
 python -m pip install --upgrade pip && python -m pip install -r dev-requirements.txt
 ```
-4. Build the dev container image(s).
-```sh
-docker compose build
-```
-5. Run the container(s).
-```sh
-docker compose up -d
-```
-6. Run the migrations.
-```sh
-docker-compose exec web python manage.py migrate --noinput
-```
-7. Access the app at [http://localhost:8000/](http://localhost:8000/)
+4. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
+    * **[Option 1]** 4.1. Run in development mode by following below instructions:
+      * 4.1.1. Build the dev container image(s).
+      ```sh
+      docker compose build
+      ```
+      * 4.1.2. Run the container(s).
+      ```sh
+      docker compose up -d
+      ```
+    * **[Option 2]** 4.2. Run in production mode by following below instructions:
+        * 4.2.1. Build the prod container image(s).
+        ```sh
+        docker-compose -f docker-compose.prod.yaml build
+        ```
+        * 4.2.2. Run the container(s).
+        ```sh
+        docker-compose -f docker-compose.prod.yaml up -d
+        ```
+        * 4.2.3. Run the migrations.
+        ```sh
+        docker-compose -f docker-compose.prod.yaml exec web python manage.py migrate --noinput
+        ```
+5. Access the app at [http://localhost:8000/](http://localhost:8000/)
 
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)

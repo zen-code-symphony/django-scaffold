@@ -13,7 +13,4 @@ then
     echo "PostgreSQL started"
 fi
 
-# Run database migrations in case of dev environment.
-python manage.py migrate
-
 exec "$@"
