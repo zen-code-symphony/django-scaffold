@@ -53,3 +53,4 @@ docker-compose exec web python manage.py migrate --noinput
 * [Docker](https://docs.docker.com/guides/get-started/)
 * [Git](https://git-scm.com/book/en/v2)
 * [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
+* [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
