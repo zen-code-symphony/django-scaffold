@@ -1,8 +1,5 @@
 # Django framework.
-Django
-
-# pip-tools.
-pip-tools
+Django==5.0
 
 # PostgreSQL database adapter.
-psycopg2-binary
+psycopg2-binary==2.9.9

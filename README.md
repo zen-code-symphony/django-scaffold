@@ -33,7 +33,7 @@ python -m venv venv && source venv/bin/activate
 ```
 3. Upgrade pip and install the Python dependencies.
 ```sh
-python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+python -m pip install --upgrade pip && python -m pip install -r dev-requirements.txt
 ```
 4. Build the dev container image(s).
 ```sh
