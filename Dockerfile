@@ -17,7 +17,13 @@ RUN pip install --upgrade pip
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
+# Copy entrypoint.sh script.
+COPY ./entrypoint.sh .
+RUN sed -i 's/\r$//g' /usr/src/app/entrypoint.sh
+RUN chmod +x /usr/src/app/entrypoint.sh
+
 # Copy project to working directory.
 COPY . .
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+# Run entrypoint script.
+ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]
