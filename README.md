@@ -33,7 +33,7 @@ python -m venv venv && source venv/bin/activate
 ```
 3. Upgrade pip and install the Python dependencies.
 ```sh
-python -m pip install --upgrade pip && python -m pip install -r dev-requirements.txt
+python -m pip install --upgrade pip && python -m pip install -r requirements-dev.txt
 ```
 4. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
     * **[Option 1]** 4.1. Run in development mode by following below instructions:

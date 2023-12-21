@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y netcat
 
 # Upgrade pip and install dependencies.
 RUN pip install --upgrade pip
-COPY ./dev-requirements.txt .
-RUN pip install -r dev-requirements.txt
+COPY ./requirements-dev.txt .
+RUN pip install -r requirements-dev.txt
 
 # Copy entrypoint.sh script.
 COPY ./entrypoint.sh .
