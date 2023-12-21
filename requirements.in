@@ -1,0 +1,8 @@
+# Django framework.
+Django
+
+# pip-tools.
+pip-tools
+
+# PostgreSQL database adapter.
+psycopg2-binary
