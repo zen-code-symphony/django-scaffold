@@ -55,11 +55,15 @@ python -m pip install --upgrade pip && python -m pip install -r app/requirements
         ```sh
         docker-compose -f docker-compose.prod.yaml up -d
         ```
-        * 4.2.3. Run the migrations.
+        * 4.2.3. Run the migrations and copy static resources.
         ```sh
         docker-compose -f docker-compose.prod.yaml exec web python manage.py migrate --noinput
         ```
-        * 4.2.4. Access the app at [http://localhost:1337/](http://localhost:1337/)
+        * 4.2.4. Copy static resources.
+        ```sh
+        docker-compose -f docker-compose.prod.yaml exec web python manage.py collectstatic --no-input --clear
+        ```
+        * 4.2.5. Access the app at [http://localhost:1337/](http://localhost:1337/)
 
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)
