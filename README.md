@@ -45,6 +45,7 @@ python -m pip install --upgrade pip && python -m pip install -r requirements-dev
       ```sh
       docker compose up -d
       ```
+      * 4.1.3. Access the app at [http://localhost:8000/](http://localhost:8000/)
     * **[Option 2]** 4.2. Run in production mode by following below instructions:
         * 4.2.1. Build the prod container image(s).
         ```sh
@@ -58,7 +59,7 @@ python -m pip install --upgrade pip && python -m pip install -r requirements-dev
         ```sh
         docker-compose -f docker-compose.prod.yaml exec web python manage.py migrate --noinput
         ```
-5. Access the app at [http://localhost:8000/](http://localhost:8000/)
+        * 4.2.4. Access the app at [http://localhost:1337/](http://localhost:1337/)
 
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)
