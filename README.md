@@ -29,11 +29,11 @@ git clone git@github.com:zen-code-symphony/django-scaffold.git && cd django-scaf
 ```
 2. Create virtual environment and activate it.
 ```sh
-python -m venv venv && source venv/bin/activate
+cd app && python -m venv venv && source venv/bin/activate
 ```
 3. Upgrade pip and install the Python dependencies.
 ```sh
-python -m pip install --upgrade pip && python -m pip install -r requirements-dev.txt
+python -m pip install --upgrade pip && python -m pip install -r requirements-dev.txt && cd..
 ```
 4. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
     * **[Option 1]** 4.1. Run in development mode by following below instructions:
