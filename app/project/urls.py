@@ -23,7 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-if bool(settings.DEBUG):
-    urlpatterns += static(
-        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
-    )
+# Enable this once you add app. Keeping it disabled to
+# keep the default Django index page active.
+# if bool(settings.DEBUG):
+#     urlpatterns += static(
+#         settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+#     )
