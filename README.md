@@ -99,6 +99,7 @@ python -m pip install --upgrade pip && python -m pip install -r app/requirements
       ```
 
 ## Learning resources
+* [Black](https://black.readthedocs.io/en/stable/index.html)
 * [Docker](https://docs.docker.com/guides/get-started/)
 * Flake8
   - [Flake8](https://flake8.pycqa.org/en/latest/index.html)

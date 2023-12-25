@@ -7,3 +7,5 @@ flake8
 isort
 # Manage dependencies.
 pip-tools
+# Pre-commit hooks.
+pre-commit
