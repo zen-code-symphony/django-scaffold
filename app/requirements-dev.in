@@ -1,3 +1,9 @@
 -r requirements.txt
+# Code formatting.
+black
+# Linting.
 flake8
+# Import order.
+isort
+# Manage dependencies.
 pip-tools

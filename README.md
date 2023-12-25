@@ -67,12 +67,34 @@ python -m pip install --upgrade pip && python -m pip install -r app/requirements
 
 
 ## Configure VS Code
-  * Linting using flake8
-    - Install [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8) extension.
-    - Add the following VS Code settings in the settings config `CTRL+,`:
+  * Linting, formatting, and sorting import orders using flake8, black, and isort.
+    - Install following VS Code extensions:
+      - [black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+      - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
+      - [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
+    - Add the following snippets in the relevant places in VS Code settings config `CTRL+,`:
       ```js
+      ...
+      "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.rulers": [
+            79
+        ]
+      },
+      ...
       "flake8.importStrategy": "fromEnvironment",
-      "flake8.cwd": "${workspaceFolder}/app"
+      "flake8.cwd": "${workspaceFolder}/app",
+      "black-formatter.importStrategy": "fromEnvironment",
+      "isort.args": [
+          "--profile",
+          "black"
+      ],
+      "isort.importStrategy": "fromEnvironment"
+      ...
       ```
 
 ## Learning resources
