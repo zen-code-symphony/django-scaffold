@@ -4,6 +4,7 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
+		"github.vscode-github-actions",
 		"ms-python.black-formatter",
 		"ms-python.flake8",
 		"ms-python.isort",
