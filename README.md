@@ -69,34 +69,11 @@ python -m pip install --upgrade pip && python -m pip install -r app/requirements
 
 ## Configure VS Code
   * Linting, formatting, and sorting import orders using flake8, black, and isort.
-    - Install following VS Code extensions:
+    - As part of workspace extensions recommendations in [.vscode/extensions.json](./.vscode/extensions.json), the following VS Code extensions should be installed:
       - [black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
       - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
       - [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
-    - Add the following snippets in the relevant places in VS Code settings config `CTRL+,`:
-      ```js
-      ...
-      "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.rulers": [
-            79
-        ]
-      },
-      ...
-      "flake8.importStrategy": "fromEnvironment",
-      "flake8.cwd": "${workspaceFolder}/app",
-      "black-formatter.importStrategy": "fromEnvironment",
-      "isort.args": [
-          "--profile",
-          "black"
-      ],
-      "isort.importStrategy": "fromEnvironment"
-      ...
-      ```
+    - Make sure that you are using the workspace settings mentioned in repository file [.vscode/settings.json](./.vscode/settings.json). `CTRL+,` and open `Workspace` settings tab to check.
 
 ## Learning resources
 * [Black](https://black.readthedocs.io/en/stable/index.html)
