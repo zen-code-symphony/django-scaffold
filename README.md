@@ -67,6 +67,7 @@ python -m pip install --upgrade pip && python -m pip install -r app/requirements
 
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)
+* [Flake8](https://flake8.pycqa.org/en/latest/index.html)
 * [Git](https://git-scm.com/book/en/v2)
 * [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
 * [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
