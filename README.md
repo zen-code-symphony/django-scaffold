@@ -65,9 +65,21 @@ python -m pip install --upgrade pip && python -m pip install -r app/requirements
         ```
         * 4.2.5. Access the app at [http://localhost:1337/](http://localhost:1337/)
 
+
+## Configure VS Code
+  * Linting using flake8
+    - Install [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8) extension.
+    - Add the following VS Code settings in the settings config `CTRL+,`:
+      ```js
+      "flake8.importStrategy": "fromEnvironment",
+      "flake8.cwd": "${workspaceFolder}/app"
+      ```
+
 ## Learning resources
 * [Docker](https://docs.docker.com/guides/get-started/)
-* [Flake8](https://flake8.pycqa.org/en/latest/index.html)
+* Flake8
+  - [Flake8](https://flake8.pycqa.org/en/latest/index.html)
+  - [VSCode-Flake8](https://github.com/microsoft/vscode-flake8)
 * [Git](https://git-scm.com/book/en/v2)
 * [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
 * [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
