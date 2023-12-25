@@ -29,47 +29,39 @@ Follow the below steps to get up and running. **NOTE**: It assumes that you have
 ```sh
 git clone git@github.com:zen-code-symphony/django-scaffold.git && cd django-scaffold
 ```
-2. Create virtual environment and activate it.
+2. Create virtual environment, activate it, install dependencies, and setup pre-commit hooks.
 ```sh
-python -m venv app/venv && source app/venv/bin/activate
+source init.sh
 ```
-3. Upgrade pip and install the Python dependencies.
-```sh
-python -m pip install --upgrade pip && python -m pip install -r app/requirements-dev.txt
-```
-4. Set up the git hook scripts.
-```sh
-pre-commit install
-```
-5. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
-    * **[Option 1]** 5.1. Run in development mode by following below instructions:
-      * 5.1.1. Build the dev container image(s).
+3. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
+    * **[Option 1]** 3.1. Run in development mode by following below instructions:
+      * 3.1.1. Build the dev container image(s).
       ```sh
       docker compose build
       ```
-      * 5.1.2. Run the container(s).
+      * 3.1.2. Run the container(s).
       ```sh
       docker compose up -d
       ```
-      * 5.1.3. Access the app at [http://localhost:8000/](http://localhost:8000/)
-    * **[Option 2]** 5.2. Run in production mode by following below instructions:
-        * 5.2.1. Build the prod container image(s).
+      * 3.1.3. Access the app at [http://localhost:8000/](http://localhost:8000/)
+    * **[Option 2]** 3.2. Run in production mode by following below instructions:
+        * 3.2.1. Build the prod container image(s).
         ```sh
         docker-compose -f docker-compose.prod.yaml build
         ```
-        * 5.2.2. Run the container(s).
+        * 3.2.2. Run the container(s).
         ```sh
         docker-compose -f docker-compose.prod.yaml up -d
         ```
-        * 5.2.3. Run the migrations and copy static resources.
+        * 3.2.3. Run the migrations and copy static resources.
         ```sh
         docker-compose -f docker-compose.prod.yaml exec web python manage.py migrate --noinput
         ```
-        * 5.2.5. Copy static resources.
+        * 3.2.3. Copy static resources.
         ```sh
         docker-compose -f docker-compose.prod.yaml exec web python manage.py collectstatic --no-input --clear
         ```
-        * 5.2.5. Access the app at [http://localhost:1337/](http://localhost:1337/)
+        * 3.2.3. Access the app at [http://localhost:1337/](http://localhost:1337/)
 
 
 ## Configure VS Code
