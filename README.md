@@ -2,6 +2,7 @@
 
 The objective of this project is to provide a quick scaffold for a django project that can be used as a reference for your own project.
 
+![Build and test workflow](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/django.yml/badge.svg)
 
 # Table of Contents
 - [Prerequisites](#prerequisites)
