@@ -14,8 +14,12 @@ click==8.1.7
     # via pip-tools
 django==5.0
     # via -r requirements.txt
+flake8==6.1.0
+    # via -r requirements-dev.in
 gunicorn==21.2.0
     # via -r requirements.txt
+mccabe==0.7.0
+    # via flake8
 packaging==23.2
     # via
     #   -r requirements.txt
@@ -25,6 +29,10 @@ pip-tools==7.3.0
     # via -r requirements-dev.in
 psycopg2-binary==2.9.9
     # via -r requirements.txt
+pycodestyle==2.11.1
+    # via flake8
+pyflakes==3.1.0
+    # via flake8
 pyproject-hooks==1.0.0
     # via build
 sqlparse==0.4.4
