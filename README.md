@@ -87,5 +87,6 @@ pre-commit install
   - [Flake8](https://flake8.pycqa.org/en/latest/index.html)
   - [VSCode-Flake8](https://github.com/microsoft/vscode-flake8)
 * [Git](https://git-scm.com/book/en/v2)
+* [GitHub Actions](https://docs.github.com/en/actions)
 * [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
 * [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
