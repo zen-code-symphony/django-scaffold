@@ -7,6 +7,7 @@ The objective of this project is to provide a quick scaffold for a django projec
 - [Prerequisites](#prerequisites)
   - [Install software](#install-software)
 - [Get up and running](#get-up-and-running)
+- [Configure VS Code](#configure-vs-code)
 - [Learning resources](#learning-resources)
 
 
