@@ -23,11 +23,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 ]
 
-
-def HelloWorld(self):
-    pass
-
-
 # Enable this once you add app. Keeping it disabled to
 # keep the default Django index page active.
 # if bool(settings.DEBUG):
