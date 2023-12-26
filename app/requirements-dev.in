@@ -1,6 +1,10 @@
 -r requirements.txt
+# Detect security issues in Python code.
+bandit
 # Code formatting.
 black
+# Rewrite to avoid DeprecationWarnings and use new features.
+django-upgrade
 # Linting.
 flake8
 # Import order.
@@ -9,3 +13,5 @@ isort
 pip-tools
 # Pre-commit hooks.
 pre-commit
+# Automatically upgrade syntax for newer versions of the language.
+pyupgrade

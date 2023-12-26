@@ -8,6 +8,8 @@ asgiref==3.7.2
     # via
     #   -r app/requirements.txt
     #   django
+bandit==1.7.6
+    # via -r app/requirements-dev.in
 black==23.12.1
     # via -r app/requirements-dev.in
 build==1.0.3
@@ -22,18 +24,28 @@ distlib==0.3.8
     # via virtualenv
 django==5.0
     # via -r app/requirements.txt
+django-upgrade==1.15.0
+    # via -r app/requirements-dev.in
 filelock==3.13.1
     # via virtualenv
 flake8==6.1.0
     # via -r app/requirements-dev.in
+gitdb==4.0.11
+    # via gitpython
+gitpython==3.1.40
+    # via bandit
 gunicorn==21.2.0
     # via -r app/requirements.txt
 identify==2.5.33
     # via pre-commit
 isort==5.13.2
     # via -r app/requirements-dev.in
+markdown-it-py==3.0.0
+    # via rich
 mccabe==0.7.0
     # via flake8
+mdurl==0.1.2
+    # via markdown-it-py
 mypy-extensions==1.0.0
     # via black
 nodeenv==1.8.0
@@ -46,6 +58,8 @@ packaging==23.2
     #   gunicorn
 pathspec==0.12.1
     # via black
+pbr==6.0.0
+    # via stevedore
 pip-tools==7.3.0
     # via -r app/requirements-dev.in
 platformdirs==4.1.0
@@ -60,14 +74,30 @@ pycodestyle==2.11.1
     # via flake8
 pyflakes==3.1.0
     # via flake8
+pygments==2.17.2
+    # via rich
 pyproject-hooks==1.0.0
     # via build
+pyupgrade==3.15.0
+    # via -r app/requirements-dev.in
 pyyaml==6.0.1
-    # via pre-commit
+    # via
+    #   bandit
+    #   pre-commit
+rich==13.7.0
+    # via bandit
+smmap==5.0.1
+    # via gitdb
 sqlparse==0.4.4
     # via
     #   -r app/requirements.txt
     #   django
+stevedore==5.1.0
+    # via bandit
+tokenize-rt==5.2.0
+    # via
+    #   django-upgrade
+    #   pyupgrade
 virtualenv==20.25.0
     # via pre-commit
 wheel==0.42.0
