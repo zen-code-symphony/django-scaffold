@@ -16,5 +16,5 @@
         "--profile",
         "black"
     ],
-    "isort.importStrategy": "fromEnvironment"    
+    "isort.importStrategy": "fromEnvironment"
 }
