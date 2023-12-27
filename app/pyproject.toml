@@ -1,3 +1,6 @@
 [tool.bandit]
 exclude_dirs = ["venv"]
 targets = "app"
+
+[tool.isort]
+profile = "black"
