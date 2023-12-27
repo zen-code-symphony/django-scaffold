@@ -28,3 +28,6 @@ pre-commit
 
 # Automatically upgrade syntax for newer versions of the language.
 pyupgrade
+
+# Report generation.
+lxml

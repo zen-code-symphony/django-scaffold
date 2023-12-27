@@ -47,6 +47,8 @@ identify==2.5.33
     # via pre-commit
 isort==5.13.2
     # via -r app/requirements-dev.in
+lxml==4.9.4
+    # via -r app/requirements-dev.in
 markdown-it-py==3.0.0
     # via rich
 mccabe==0.7.0
