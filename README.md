@@ -81,4 +81,5 @@ source init.sh
 * [Git](https://git-scm.com/book/en/v2)
 * [GitHub Actions](https://docs.github.com/en/actions)
 * [Markdown cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
+* [mypy](https://mypy.readthedocs.io/en/stable/index.html)
 * [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
