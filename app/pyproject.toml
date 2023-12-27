@@ -4,6 +4,7 @@ targets = "app"
 
 [tool.isort]
 profile = "black"
+src_paths = [ "app" ]
 
 [tool.mypy]
 plugins = ["mypy_django_plugin.main"]

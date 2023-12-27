@@ -23,7 +23,7 @@ repos:
     hooks:
     -   id: isort
         args:
-          - "-c"
+          - "--sp"
           - "app/pyproject.toml"
   - repo: https://github.com/pycqa/flake8
     rev: 6.1.0
