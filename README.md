@@ -31,7 +31,7 @@ git clone git@github.com:zen-code-symphony/django-scaffold.git && cd django-scaf
 ```
 2. Create virtual environment, activate it, install dependencies, and setup pre-commit hooks.
 ```sh
-source init.sh
+make init
 ```
 3. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
     * **[Option 1]** 3.1. Run in development mode by following below instructions:

@@ -1,25 +1,30 @@
 # Makefile
 
+APP_DIR = app
+
+init:
+	@. ./init.sh
+
 format-black:
-	@black ./app
+	@black ./$(APP_DIR)
 
 format-isort:
-	@isort --sp app/pyproject.toml app/
+	@isort --sp ./$(APP_DIR)/pyproject.toml ./$(APP_DIR)/
 
 lint-black:
-	@black ./app --check
+	@black ./$(APP_DIR) --check
 
 lint-isort:
-	@isort --sp app/pyproject.toml app/ --check
+	@isort --sp ./$(APP_DIR)/pyproject.toml ./$(APP_DIR)/ --check
 
 lint-flake8:
-	@flake8 --config=./app/.flake8 app/
+	@flake8 --config=./$(APP_DIR)/.flake8 ./$(APP_DIR)/
 
 lint-mypy:
-	@mypy ./app
+	@mypy ./$(APP_DIR)
 
 lint-mypy-report:
-	@mypy ./app --html-report ./mypy_html
+	@mypy ./$(APP_DIR) --html-report ./mypy_html
 
 format: format-black format-isort
 
