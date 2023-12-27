@@ -1,17 +1,30 @@
 -r requirements.txt
 # Detect security issues in Python code.
 bandit
+
 # Code formatting.
 black
+
+# Type stubs and a custom mypy plugin for Django.
+django-stubs[compatible-mypy]
+
 # Rewrite to avoid DeprecationWarnings and use new features.
 django-upgrade
+
 # Linting.
 flake8
+
 # Import order.
 isort
+
+# Static type checking.
+mypy
+
 # Manage dependencies.
 pip-tools
+
 # Pre-commit hooks.
 pre-commit
+
 # Automatically upgrade syntax for newer versions of the language.
 pyupgrade

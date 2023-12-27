@@ -23,7 +23,14 @@ click==8.1.7
 distlib==0.3.8
     # via virtualenv
 django==5.0
-    # via -r app/requirements.txt
+    # via
+    #   -r app/requirements.txt
+    #   django-stubs
+    #   django-stubs-ext
+django-stubs[compatible-mypy]==1.9.0
+    # via -r app/requirements-dev.in
+django-stubs-ext==4.2.7
+    # via django-stubs
 django-upgrade==1.15.0
     # via -r app/requirements-dev.in
 filelock==3.13.1
@@ -46,8 +53,14 @@ mccabe==0.7.0
     # via flake8
 mdurl==0.1.2
     # via markdown-it-py
+mypy==1.8.0
+    # via
+    #   -r app/requirements-dev.in
+    #   django-stubs
 mypy-extensions==1.0.0
-    # via black
+    # via
+    #   black
+    #   mypy
 nodeenv==1.8.0
     # via pre-commit
 packaging==23.2
@@ -98,6 +111,17 @@ tokenize-rt==5.2.0
     # via
     #   django-upgrade
     #   pyupgrade
+toml==0.10.2
+    # via django-stubs
+types-pytz==2023.3.1.1
+    # via django-stubs
+types-pyyaml==6.0.12.12
+    # via django-stubs
+typing-extensions==4.9.0
+    # via
+    #   django-stubs
+    #   django-stubs-ext
+    #   mypy
 virtualenv==20.25.0
     # via pre-commit
 wheel==0.42.0
