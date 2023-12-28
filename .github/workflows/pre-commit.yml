@@ -1,4 +1,4 @@
-name: Install Deps & Run Tests CI
+name: Pre-commit
 
 on:
   push:
@@ -27,6 +27,3 @@ jobs:
         pip install -r ./app/requirements.txt
     - name: Run pre-commit hooks
       uses: pre-commit/action@v3.0.0
-    - name: Run Tests
-      run: |
-        python ./app/manage.py test

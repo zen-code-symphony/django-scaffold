@@ -27,6 +27,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r ./app/requirements-dev.txt
+    - name: Run manage.py tests
+      run: |
+        python ./app/manage.py test
     - name: Run unit tests with coverage
       run: |
         set -o pipefail
