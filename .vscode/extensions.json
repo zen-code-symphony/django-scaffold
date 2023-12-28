@@ -10,6 +10,7 @@
 		"ms-python.flake8",
 		"ms-python.isort",
 		"ms-python.vscode-pylance",
+		"ms-python.mypy-type-checker",
 		"ms-python.python",
 		"ms-vscode.makefile-tools"
 	],

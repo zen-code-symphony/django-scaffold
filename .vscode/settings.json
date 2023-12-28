@@ -16,5 +16,7 @@
         "--profile",
         "black"
     ],
-    "isort.importStrategy": "fromEnvironment"
+    "isort.importStrategy": "fromEnvironment",
+    "mypy-type-checker.cwd": "${workspaceFolder}/app",
+    "mypy-type-checker.importStrategy": "fromEnvironment"
 }
