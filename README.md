@@ -2,7 +2,7 @@
 
 The objective of this project is to provide a quick scaffold for a django project that can be used as a reference for your own project.
 
-![Build and test workflow](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/install-deps-run-tests.yml/badge.svg)
+[![Install Deps & Run Tests CI](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/install-deps-run-tests.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/install-deps-run-tests.yml)
 
 # Table of Contents
 - [Prerequisites](#prerequisites)
