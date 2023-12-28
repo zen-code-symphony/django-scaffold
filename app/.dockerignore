@@ -1,6 +1,29 @@
 # venv
 venv/
+
 # mypy
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# pytest
+.pytest_cache
+
+# pip-tools: requirements
+requirements*.in
+requirements-dev.txt
+
+# Dockerfile
+Dockerfile*
+.dockerignore
+
+# Dev tools config files
+.python-version
+.flake8
+pyproject.toml
+
+# Tests
+tests/
+
+# Scripts
+entrypoint.sh
