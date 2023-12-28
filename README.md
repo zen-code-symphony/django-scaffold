@@ -67,12 +67,8 @@ make init
 
 
 ## Configure VS Code
-  * Linting, formatting, and sorting import orders using flake8, black, and isort.
-    - As part of workspace extensions recommendations in [.vscode/extensions.json](./.vscode/extensions.json), the following VS Code extensions should be installed:
-      - [black](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
-      - [isort](https://marketplace.visualstudio.com/items?itemName=ms-python.isort)
-      - [flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)
-    - Make sure that you are using the workspace settings mentioned in repository file [.vscode/settings.json](./.vscode/settings.json). `CTRL+,` and open `Workspace` settings tab to check.
+  - As part of VS Code workspace extensions recommendations, the extensions mentioned in [.vscode/extensions.json](./.vscode/extensions.json), should be installed. This includes extensions for flake8, black, isort etc.
+  - Make sure that you are using the workspace settings mentioned in repository file [.vscode/settings.json](./.vscode/settings.json). `CTRL+,` and open `Workspace` settings tab to check.
 
 ## Learning resources
 * [Black](https://black.readthedocs.io/en/stable/index.html)
