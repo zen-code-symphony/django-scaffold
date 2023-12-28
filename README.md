@@ -2,9 +2,9 @@
 
 The objective of this project is to provide a quick scaffold for a django project that can be used as a reference for your own project.
 
+[![Pre-commit](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/pre-commit.yml)
 [![Linting](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/lint.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/lint.yml)
 [![Testing](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/test.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/test.yml)
-[![Install Deps & Run Tests CI](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/install-deps-run-tests.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/install-deps-run-tests.yml)
 
 # Table of Contents
 - [Prerequisites](#prerequisites)
