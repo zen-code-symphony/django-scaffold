@@ -7,7 +7,9 @@ APP_DIR = app
 help:  ## Display this help
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
-init:
+##@ Initialize repository
+
+init: ## initialize repository after git clone
 	@. ./init.sh
 
 ##@ Formatting
@@ -47,3 +49,28 @@ lint-mypy-report: ## run mypy & create report
 
 .PHONY: lint
 lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
+
+##@ Testing
+
+.PHONY: unit-tests
+unit-tests: ## run unit-tests with pytest
+	@pytest -c app/pyproject.toml
+
+.PHONY: unit-tests-cov
+unit-tests-cov: ## run unit-tests with pytest and generate coverage (terminal + html)
+	@pytest -c app/pyproject.toml --cov=app --cov-report term-missing --cov-report=html
+
+.PHONY: unit-tests-cov-fail
+unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (terminal + html). Fail if coverage too low & create files for CI.
+	@pytest -c app/pyproject.toml --cov=app --cov-report term-missing --cov-report=html --cov-fail-under=50 --junitxml=pytest.xml | tee pytest-coverage.txt
+
+##@ Clean-up
+
+clean-cov: ## remove output files from pytest & coverage
+	@rm -rf .coverage
+	@rm -rf htmlcov
+	@rm -rf pytest.xml
+	@rm -rf pytest-coverage.txt
+	@rm -rf dist
+
+clean: clean-cov ## run all clean commands

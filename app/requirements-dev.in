@@ -26,6 +26,12 @@ pip-tools
 # Pre-commit hooks.
 pre-commit
 
+# pytest and pytest-django.
+pytest-django
+
+# pytest coverage report.
+pytest-cov
+
 # Automatically upgrade syntax for newer versions of the language.
 pyupgrade
 
