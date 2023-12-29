@@ -70,11 +70,12 @@ make init
   - As part of VS Code workspace extensions recommendations, the extensions mentioned in [.vscode/extensions.json](./.vscode/extensions.json), should be installed. This includes extensions for flake8, black, isort etc.
   - Make sure that you are using the workspace settings mentioned in repository file [.vscode/settings.json](./.vscode/settings.json). `CTRL+,` and open `Workspace` settings tab to check.
 
-## Learning resources
+## References
 * [Black](https://black.readthedocs.io/en/stable/index.html)
 * [Conventional Commits](https://www.conventionalcommits.org/)
+* [djangoproject.com](https://www.djangoproject.com/)
 * [diataxis](https://diataxis.fr/)
-* [Docker](https://docs.docker.com/guides/get-started/)
+* [docs.docker.com](https://docs.docker.com/)
 * Flake8
   - [Flake8](https://flake8.pycqa.org/en/latest/index.html)
   - [VSCode-Flake8](https://github.com/microsoft/vscode-flake8)
@@ -84,3 +85,8 @@ make init
 * [MkDocs](https://www.mkdocs.org/)
 * [mypy](https://mypy.readthedocs.io/en/stable/index.html)
 * [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
+* [Python best practices for a new project ](https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/)
+* [realpython.com](https://realpython.com/)
+* [Setting up Python projects](https://towardsdatascience.com/setting-up-python-projects-part-i-408603868c08)
+* [stackoverflow.com](https://stackoverflow.com/)
+* [testdriven.io](https://testdriven.io/)
