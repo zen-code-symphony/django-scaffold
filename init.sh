@@ -18,6 +18,7 @@ fi
 if [ ! -f .git/hooks/pre-commit ]; then
     # Set up the git hook scripts.
     pre-commit install
+    pre-commit install --hook-type commit-msg
 else
     echo "pre-commit hooks already installed for this Git repository. Skipping installation."
 fi
