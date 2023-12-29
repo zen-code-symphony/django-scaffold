@@ -20,6 +20,10 @@ isort
 # Static type checking.
 mypy
 
+# MkDocs.
+mkdocs
+mkdocs-material
+
 # Manage dependencies.
 pip-tools
 
