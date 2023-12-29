@@ -7,10 +7,17 @@ APP_DIR = app
 help:  ## Display this help
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m<target>\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
-##@ Initialize repository
+##@ Initialize and/or update local repository
 
+.PHONY: init
 init: ## initialize repository after git clone
 	@. ./init.sh
+
+.PHONY: update
+update: ## updates the local repository
+	@pip-sync app/requirements-dev.txt
+	@pre-commit install
+	@pre-commit install --hook-type commit-msg
 
 ##@ Formatting
 
@@ -63,6 +70,11 @@ unit-tests-cov: ## run unit-tests with pytest and generate coverage (terminal + 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (terminal + html). Fail if coverage too low & create files for CI.
 	@pytest -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html --cov-fail-under=50 --junitxml=pytest.xml | tee pytest-coverage.txt
+
+##@ Documentation
+
+docs-build: ## build documentation locally
+	@mkdocs build
 
 ##@ Clean-up
 
