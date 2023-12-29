@@ -90,6 +90,11 @@ docs-build: ## build documentation locally
 docs-deploy: ## build & deploy documentation to "gh-pages" branch
 	@mkdocs gh-deploy -m "docs: update documentation" -v --force
 
+.PHONY: docs-serve
+docs-serve: ## run local server to  view docs locally
+	@mkdocs serve
+
+
 ##@ Clean-up
 
 clean-cov: ## remove output files from pytest & coverage
