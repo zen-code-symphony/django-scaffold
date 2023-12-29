@@ -23,5 +23,4 @@ nav:
 
 repo_url: https://github.com/zen-code-symphony/django-scaffold
 
-# to navigate with `/site` content correctly
 use_directory_urls: false
