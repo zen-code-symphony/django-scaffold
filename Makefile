@@ -76,6 +76,9 @@ unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (termin
 docs-build: ## build documentation locally
 	@mkdocs build
 
+docs-deploy: ## build & deploy documentation to "gh-pages" branch
+   @mkdocs gh-deploy -m "docs: update documentation" -v --force
+
 ##@ Clean-up
 
 clean-cov: ## remove output files from pytest & coverage
@@ -91,4 +94,7 @@ clean-cov: ## remove output files from pytest & coverage
 	@rm -rf $(APP_DIR)/.pytest_cache
 	@rm -rf .pytest_cache
 
-clean: clean-cov ## run all clean commands
+clean-docs: ## remove output files from mkdocs
+	@rm -rf site
+
+clean: clean-cov clean-docs ## run all clean commands
