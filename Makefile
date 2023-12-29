@@ -73,6 +73,7 @@ unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (termin
 
 ##@ Documentation
 
+.PHONY: docs-build
 docs-build: ## build documentation locally
 	@mkdocs build
 
