@@ -13,15 +13,24 @@ help:  ## Display this help
 init: ## initialize repository after git clone
 	@. ./init.sh
 
-.PHONY: update
-update: ## updates the local repository
+.PHONY:	installdeps
+installdeps: ## install Python dependencies in the local repository
+	@pip-sync app/requirements.txt
 	@pip-sync app/requirements-dev.txt
 	@pre-commit install
 	@pre-commit install --hook-type commit-msg
 
+.PHONY:	genpydeps
+genpydeps: ## generate Python dependencies for the local repository
+	@pip-compile app/requirements.in
+	@pip-compile app/requirements-dev.in
+
+.PHONY: alldeps
+alldeps: genpydeps installdeps ## generate and install all dependencies
+
 ##@ Formatting
 
-.PHONY: format-black
+.PHONY:	format-black
 format-black: ## black (code formatter)
 	@black ./$(APP_DIR)
 
@@ -61,11 +70,11 @@ lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
 
 .PHONY: unit-tests
 unit-tests: ## run unit-tests with pytest
-	@pytest -c $(APP_DIR)/pyproject.toml
+	@pytest --doctest-modules -c $(APP_DIR)/pyproject.toml
 
 .PHONY: unit-tests-cov
 unit-tests-cov: ## run unit-tests with pytest and generate coverage (terminal + html)
-	@pytest -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html
+	@pytest --doctest-modules -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html
 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (terminal + html). Fail if coverage too low & create files for CI.

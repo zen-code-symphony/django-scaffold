@@ -13,6 +13,10 @@ theme:
 
 plugins:
   - search:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [app]
 
 nav:
   - Index Page: index.md

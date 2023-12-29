@@ -5,6 +5,7 @@ The objective of this project is to provide a quick scaffold for a django projec
 [![Pre-commit](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/pre-commit.yml)
 [![Linting](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/lint.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/lint.yml)
 [![Testing](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/test.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/test.yml)
+[![Documentation](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/docs-pages.yml/badge.svg)](https://github.com/zen-code-symphony/django-scaffold/actions/workflows/docs-pages.yml)
 
 # Table of Contents
 - [Prerequisites](#prerequisites)

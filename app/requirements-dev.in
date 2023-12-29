@@ -23,6 +23,7 @@ mypy
 # MkDocs.
 mkdocs
 mkdocs-material
+mkdocstrings[python]
 
 # Manage dependencies.
 pip-tools
