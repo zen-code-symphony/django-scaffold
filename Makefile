@@ -54,15 +54,15 @@ lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
 
 .PHONY: unit-tests
 unit-tests: ## run unit-tests with pytest
-	@pytest -c app/pyproject.toml
+	@pytest -c $(APP_DIR)/pyproject.toml
 
 .PHONY: unit-tests-cov
 unit-tests-cov: ## run unit-tests with pytest and generate coverage (terminal + html)
-	@pytest -c app/pyproject.toml --cov=app --cov-report term-missing --cov-report=html
+	@pytest -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html
 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (terminal + html). Fail if coverage too low & create files for CI.
-	@pytest -c app/pyproject.toml --cov=app --cov-report term-missing --cov-report=html --cov-fail-under=50 --junitxml=pytest.xml | tee pytest-coverage.txt
+	@pytest -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html --cov-fail-under=50 --junitxml=pytest.xml | tee pytest-coverage.txt
 
 ##@ Clean-up
 
@@ -72,5 +72,11 @@ clean-cov: ## remove output files from pytest & coverage
 	@rm -rf pytest.xml
 	@rm -rf pytest-coverage.txt
 	@rm -rf dist
+	@rm -rf mypy_html
+	@rm -rf .mypy_cache
+	@rm -rf $(APP_DIR)/mypy_html
+	@rm -rf $(APP_DIR)/.mypy_cache
+	@rm -rf $(APP_DIR)/.pytest_cache
+	@rm -rf .pytest_cache
 
 clean: clean-cov ## run all clean commands

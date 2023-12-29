@@ -144,6 +144,8 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+mypy_html/
+
 
 # Pyre type checker
 .pyre/
@@ -173,6 +175,3 @@ cython_debug/
 
 # Built Visual Studio Code Extensions
 *.vsix
-
-# mypy report.
-mypy_html/
