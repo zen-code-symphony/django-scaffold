@@ -76,8 +76,9 @@ unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (termin
 docs-build: ## build documentation locally
 	@mkdocs build
 
+.PHONY: docs-deploy
 docs-deploy: ## build & deploy documentation to "gh-pages" branch
-   @mkdocs gh-deploy -m "docs: update documentation" -v --force
+	@mkdocs gh-deploy -m "docs: update documentation" -v --force
 
 ##@ Clean-up
 
