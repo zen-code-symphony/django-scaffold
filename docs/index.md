@@ -1,4 +1,4 @@
-This site contains the project documentation for the `django-scaffold`.
+This **WIP** site contains the project documentation for the `django-scaffold`.
 
 ## Table of Contents
 
