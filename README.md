@@ -72,6 +72,8 @@ make init
 
 ## Learning resources
 * [Black](https://black.readthedocs.io/en/stable/index.html)
+* [Conventional Commits](https://www.conventionalcommits.org/)
+* [diataxis](https://diataxis.fr/)
 * [Docker](https://docs.docker.com/guides/get-started/)
 * Flake8
   - [Flake8](https://flake8.pycqa.org/en/latest/index.html)
