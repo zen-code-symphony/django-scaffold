@@ -37,6 +37,9 @@ pytest-django
 # pytest coverage report.
 pytest-cov
 
+# Semantic release.
+python-semantic-release
+
 # Automatically upgrade syntax for newer versions of the language.
 pyupgrade
 

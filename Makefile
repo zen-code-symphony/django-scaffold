@@ -1,6 +1,7 @@
 # Makefile
 
 APP_DIR = app
+PYPROJECT_CONFIG = $(APP_DIR)/pyproject.toml
 
 .DEFAULT_GOAL := help
 .PHONY: help
@@ -36,7 +37,7 @@ format-black: ## black (code formatter)
 
 .PHONY: format-isort
 format-isort: ## isort (import formatter)
-	@isort --sp ./$(APP_DIR)/pyproject.toml ./$(APP_DIR)/
+	@isort --sp ./$(PYPROJECT_CONFIG) ./$(APP_DIR)/
 
 .PHONY: format
 format: format-black format-isort ## run all formatters
@@ -49,7 +50,7 @@ lint-black: ## black in linting mode
 
 .PHONY: lint-isort
 lint-isort: ## isort in linting mode
-	@isort --sp ./$(APP_DIR)/pyproject.toml ./$(APP_DIR)/ --check
+	@isort --sp ./$(PYPROJECT_CONFIG) ./$(APP_DIR)/ --check
 
 .PHONY: lint-flake8
 lint-flake8: ## flake8 (linter)
@@ -70,15 +71,15 @@ lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
 
 .PHONY: unit-tests
 unit-tests: ## run unit-tests with pytest
-	@pytest --doctest-modules -c $(APP_DIR)/pyproject.toml
+	@pytest --doctest-modules -c $(PYPROJECT_CONFIG)
 
 .PHONY: unit-tests-cov
 unit-tests-cov: ## run unit-tests with pytest and generate coverage (terminal + html)
-	@pytest --doctest-modules -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html
+	@pytest --doctest-modules -c $(PYPROJECT_CONFIG) --cov=app --cov-report term-missing --cov-report=html
 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail: ## run unit tests with pytest and generate coverage (terminal + html). Fail if coverage too low & create files for CI.
-	@pytest -c $(APP_DIR)/pyproject.toml --cov=app --cov-report term-missing --cov-report=html --cov-fail-under=50 --junitxml=pytest.xml | tee pytest-coverage.txt
+	@pytest -c $(PYPROJECT_CONFIG) --cov=app --cov-report term-missing --cov-report=html --cov-fail-under=50 --junitxml=pytest.xml | tee pytest-coverage.txt
 
 ##@ Documentation
 
@@ -94,6 +95,20 @@ docs-deploy: ## build & deploy documentation to "gh-pages" branch
 docs-serve: ## run local server to  view docs locally
 	@mkdocs serve
 
+##@ Releases
+
+.PHONY: next-version
+next-version: ## returns the next version that will be applied
+	@semantic-release --noop --config=$(PYPROJECT_CONFIG) version --print
+
+version: ## generate the next version that will be applied
+	@semantic-release --config=$(PYPROJECT_CONFIG) version
+
+changelog: ## generate changelog
+	@semantic-release changelog
+
+publish-noop: ## publish command (no-operation mode)
+	@semantic-release publish --noop
 
 ##@ Clean-up
 

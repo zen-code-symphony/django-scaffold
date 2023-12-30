@@ -88,6 +88,7 @@ make init
 * [pip-tools](https://pip-tools.readthedocs.io/en/latest/)
 * [Python best practices for a new project ](https://mitelman.engineering/blog/python-best-practice/automating-python-best-practices-for-a-new-project/)
 * [realpython.com](https://realpython.com/)
+* [Semantic Versioning](https://semver.org/)
 * [Setting up Python projects](https://towardsdatascience.com/setting-up-python-projects-part-i-408603868c08)
 * [stackoverflow.com](https://stackoverflow.com/)
 * [testdriven.io](https://testdriven.io/)
