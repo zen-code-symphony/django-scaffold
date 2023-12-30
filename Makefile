@@ -101,14 +101,14 @@ docs-serve: ## run local server to  view docs locally
 next-version: ## returns the next version that will be applied
 	@semantic-release --noop --config=$(PYPROJECT_CONFIG) version --print
 
-version: ## generate the next version that will be applied
+version: ## generate the next version and creates a release.
 	@semantic-release --config=$(PYPROJECT_CONFIG) version
 
 changelog: ## generate changelog
 	@semantic-release changelog
 
 publish-noop: ## publish command (no-operation mode)
-	@semantic-release publish --noop
+	@semantic-release --noop publish
 
 ##@ Clean-up
 
