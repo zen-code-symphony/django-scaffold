@@ -38,33 +38,17 @@ make init
 ```
 3. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
     * **[Option 1]** 3.1. Run in development mode by following below instructions:
-      * 3.1.1. Build the dev container image(s).
+      * 3.1.1. Build and run the dev container image(s).
       ```sh
-      docker compose build
+      make bup-dev
       ```
-      * 3.1.2. Run the container(s).
-      ```sh
-      docker compose up -d
-      ```
-      * 3.1.3. Access the app at [http://localhost:8000/](http://localhost:8000/)
+      * 3.2.2. Browser will open automatically with the app running at [http://localhost:8000/](http://localhost:8000/)
     * **[Option 2]** 3.2. Run in production mode by following below instructions:
-        * 3.2.1. Build the prod container image(s).
+        * 3.2.1. Build and run the prod container image(s).
         ```sh
-        docker-compose -f docker-compose.prod.yaml build
+        make bup-prod
         ```
-        * 3.2.2. Run the container(s).
-        ```sh
-        docker-compose -f docker-compose.prod.yaml up -d
-        ```
-        * 3.2.3. Run the migrations and copy static resources.
-        ```sh
-        docker-compose -f docker-compose.prod.yaml exec web python manage.py migrate --noinput
-        ```
-        * 3.2.3. Copy static resources.
-        ```sh
-        docker-compose -f docker-compose.prod.yaml exec web python manage.py collectstatic --no-input --clear
-        ```
-        * 3.2.3. Access the app at [http://localhost:1337/](http://localhost:1337/)
+        * 3.2.2. Browser will open automatically with the app running at [http://localhost:1337/](http://localhost:1337/)
 
 
 ## Configure VS Code
