@@ -11,7 +11,6 @@ dmypy.json
 
 # pip-tools: requirements
 requirements*.in
-requirements-dev.txt
 
 # Dockerfile
 Dockerfile*
@@ -24,6 +23,3 @@ pyproject.toml
 
 # Tests
 tests/
-
-# Scripts
-entrypoint.sh

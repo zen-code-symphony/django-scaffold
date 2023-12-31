@@ -110,6 +110,35 @@ changelog: ## generate changelog
 publish-noop: ## publish command (no-operation mode)
 	@semantic-release --noop publish
 
+##@ Build and run app
+
+build-dev:  ## build dev containers
+	@docker compose build
+
+up-dev: ## run dev containers
+	@docker compose up -d
+	@sleep 5
+	@@open http://localhost:8000/
+
+bup-dev: build-dev up-dev ## build and run dev containers
+
+down-dev: ## stop dev containers
+	@docker compose down -v
+
+build-prod:  ## build prod containers
+	@docker compose -f docker-compose.prod.yaml build
+
+up-prod: ## run prod containers
+	@docker compose -f docker-compose.prod.yaml up -d
+	@sleep 3 && docker-compose -f docker-compose.prod.yaml exec web python manage.py migrate --noinput
+	@docker-compose -f docker-compose.prod.yaml exec web python manage.py collectstatic --no-input --clear
+	@open http://localhost:1337/
+
+bup-prod: build-prod up-prod ## build and run prod containers
+
+down-prod: ## stop dev containers
+	@docker compose -f docker-compose.prod.yaml down -v
+
 ##@ Clean-up
 
 clean-cov: ## remove output files from pytest & coverage
