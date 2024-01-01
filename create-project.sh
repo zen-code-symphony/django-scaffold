@@ -15,4 +15,4 @@ cd "$DIR_NAME"
 rm -rf .git
 git init
 make init
-source venv/bin/activate
+source app/venv/bin/activate
