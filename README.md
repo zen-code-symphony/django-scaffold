@@ -11,6 +11,8 @@ The objective of this project is to provide a quick scaffold for a django projec
 - [Prerequisites](#prerequisites)
   - [Install software](#install-software)
 - [Get up and running](#get-up-and-running)
+  - [PATH 1: Create a copy for your own project](#path-1-create-a-copy-for-your-own-project)
+  - [PATH 2: Cloning this repository](#path-2-cloning-this-repository)
 - [Configure VS Code](#configure-vs-code)
 - [Learning resources](#learning-resources)
 
@@ -26,7 +28,25 @@ The objective of this project is to provide a quick scaffold for a django projec
 
 ## Get up and running
 
-Follow the below steps to get up and running. **NOTE**: It assumes that you have installed Python and configured git. If you are using pyenv, `.python-version` file will be used.
+Follow one of the below paths to get up and running. **NOTE**: It assumes that you have installed Python and configured git. If you are using pyenv, `.python-version` file will be used.
+
+### PATH 1: Create a copy for your own project
+
+Run the below command to create a project based on this basic scaffold.
+
+**Option 1**: Create new project from Linux or macOS command shell and stay in the shell:
+```sh
+# Replace "my_project" with your own project name.
+curl -sSL https://raw.githubusercontent.com/zen-code-symphony/django-scaffold/main/create-project.sh | bash -s my_project && cd my_project && source venv/bin/activate
+```
+
+**Option 2**: Create new project from Linux or macOS shell and open VS Code editor:
+```sh
+# Replace "my_project" with your own project name.
+curl -sSL https://raw.githubusercontent.com/zen-code-symphony/django-scaffold/main/create-project.sh | bash -s my_project && cd my_project && code .
+```
+
+### PATH 2: Cloning this repository
 
 1. Clone the repository.
 ```sh
