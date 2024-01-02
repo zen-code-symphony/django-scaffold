@@ -6,7 +6,7 @@
             "source.organizeImports": "explicit"
         },
         "editor.rulers": [
-            79
+            88
         ]
     },
     "flake8.importStrategy": "fromEnvironment",
