@@ -37,7 +37,7 @@ Run the below command to create a project based on this basic scaffold.
 **Option 1**: Create new project from Linux or macOS command shell and stay in the shell:
 ```sh
 # Replace "my_project" with your own project name.
-curl -sSL https://raw.githubusercontent.com/zen-code-symphony/django-scaffold/main/create-project.sh | bash -s my_project && cd my_project && source venv/bin/activate
+curl -sSL https://raw.githubusercontent.com/zen-code-symphony/django-scaffold/main/create-project.sh | bash -s my_project && cd my_project && source app/venv/bin/activate
 ```
 
 **Option 2**: Create new project from Linux or macOS shell and open VS Code editor:
