@@ -1,4 +1,4 @@
-FROM python:3.11.4-slim-buster as base
+FROM python:3.12.1-slim as base
 
 RUN pip install --upgrade pip
 
@@ -50,7 +50,7 @@ RUN mkdir $APP_HOME/staticfiles
 WORKDIR $APP_HOME
 
 # Install packages and wheel.
-RUN apt-get update && apt-get install -y --no-install-recommends netcat
+RUN apt-get update && apt-get install -y --no-install-recommends netcat-traditional
 COPY --from=builder /usr/src/app/wheels /wheels
 COPY --from=builder /usr/src/app/requirements.txt .
 RUN pip install --no-cache /wheels/*

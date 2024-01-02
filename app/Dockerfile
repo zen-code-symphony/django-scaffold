@@ -1,4 +1,4 @@
-FROM python:3.11.4-slim-buster
+FROM python:3.12.1-slim
 
 # Sets the working directory.
 WORKDIR /usr/src/app
@@ -10,7 +10,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Install tools.
-RUN apt-get update && apt-get install -y netcat
+RUN apt-get update && apt-get install -y netcat-traditional
 
 # Upgrade pip and install dependencies.
 RUN pip install --upgrade pip
