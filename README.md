@@ -13,6 +13,7 @@ The objective of this project is to provide a quick scaffold for a django projec
 - [Get up and running](#get-up-and-running)
   - [PATH 1: Create a copy for your own project](#path-1-create-a-copy-for-your-own-project)
   - [PATH 2: Cloning this repository](#path-2-cloning-this-repository)
+  - [Build and run app](#build-and-run-app)
 - [Configure VS Code](#configure-vs-code)
 - [Learning resources](#learning-resources)
 
@@ -56,19 +57,21 @@ git clone git@github.com:zen-code-symphony/django-scaffold.git && cd django-scaf
 ```sh
 make init
 ```
-3. Run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
-    * **[Option 1]** 3.1. Run in development mode by following below instructions:
-      * 3.1.1. Build and run the dev container image(s).
-      ```sh
-      make bup-dev
-      ```
-      * 3.2.2. Browser will open automatically with the app running at [http://localhost:8000/](http://localhost:8000/)
-    * **[Option 2]** 3.2. Run in production mode by following below instructions:
-        * 3.2.1. Build and run the prod container image(s).
-        ```sh
-        make bup-prod
-        ```
-        * 3.2.2. Browser will open automatically with the app running at [http://localhost:1337/](http://localhost:1337/)
+
+### Build and run app
+Once you have followed [PATH 1](#path-1-create-a-copy-for-your-own-project) or [PATH 2](#path-2-cloning-this-repository) above, build and run the app in dev (*Option 1* below) or prod (*Option 2* below) mode.
+* **[Option 1]** Run in development mode by following below instructions:
+  * 1.1 Build and run the dev container image(s).
+  ```sh
+  make bup-dev
+  ```
+  * 1.2 Browser will open automatically with the app running at [http://localhost:8000/](http://localhost:8000/)
+* **[Option 2]** Run in production mode by following below instructions:
+    * 2.1. Build and run the prod container image(s).
+    ```sh
+    make bup-prod
+    ```
+    * 2.2. Browser will open automatically with the app running at [http://localhost:1337/](http://localhost:1337/)
 
 
 ## Configure VS Code
